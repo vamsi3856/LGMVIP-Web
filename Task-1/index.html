@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body><center>
+            <div class="c1">
+                <h2 style="color:white;">To Do List</h2>
+            </div>
+            <div id="newtask">
+                
+                <input type="text" name="name" id="name" placeholder="Add here">
+                <button type="submit" id="add"><b>Add</b></button>
+                <div id="tasks">
+                </div>
+            </div>
 
+        </center>
+        <script>
+            document.querySelector('#add').onclick = function(){
+                if(document.querySelector('#newtask input').value.length == 0){
+                    alert('Please enter a task');
+                }
+                else {
+                    document.querySelector('#tasks').innerHTML+= `<div class="task"><span id="taskname">
+                                                                 ${document.querySelector("#newtask input").
+                                                                 value}</span><button style="background:red; color:yellow;" class="delete">Delete</button></div>`;
+                  
+                    var current = document.querySelectorAll('.delete');
+                    for(var i=0;i<current.length;i++){
+                        current[i].onclick=function(){
+                            this.parentNode.remove();
+                        }
+                    }
+
+                    var tasks = document.querySelectorAll('#taskname');
+                    for(var i=0;i<tasks.length;i++){
+                        tasks[i].onclick=function(){
+                            this.classList.toggle('Completed');
+                        }
+                    }
+                    document.querySelector('#newtask input').value = '';
+
+
+                }
+             }
+        </script>
+        
+    </body>
+</html>
