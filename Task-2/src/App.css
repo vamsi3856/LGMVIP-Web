@@ -1,0 +1,113 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+nav {
+  height: 20vh;
+  width: 100%;
+  background-image: linear-gradient(to left bottom, #163158, #085885, #0083ae, #00b0d0, #12dfeb);
+  color: rgb(241, 235, 235);
+  /* margin-bottom: 20px; */
+}
+.navitems {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.navitems h2 {
+  font-size: 20px;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-top: 1.5em;
+}
+
+.navitems button {
+  width: 15%;
+  height: 9vh;
+  border: 3px solid black;
+  border-radius: 40px;
+  background-color: #5cd814;
+  font-family: serif;
+  font-size: 20px;
+  margin: 34px 212px;
+}
+
+.fetchbtn:hover {
+  background-color: rgb(226, 244, 88);
+  cursor: pointer;
+  color: rgb(11, 16, 21);
+}
+.userdatacontainer {
+  width: 100%;
+  height: fit-content;
+  
+}
+#main {
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+  /* padding-top: 10vh; */
+}
+.name:hover {
+  cursor: pointer;
+  color: rgb(50, 218, 204);
+}
+
+.avatar {
+  border-radius: 20%;
+}
+
+.profile_cont {
+  border-radius:0%;
+  background-image: linear-gradient(to bottom, #37dbdb, #00bdec, #0097ec, #7869cb, #a12d89);  margin: 20px;
+  padding: 20px;
+  width: 25%;
+  height: 40vh;
+  text-align: center;
+  transition: transform ease 0.2s;
+  opacity: 0.8;
+  margin-top: 10vh;
+}
+
+.profile_cont:hover {
+  transform: translate(0, -50px);
+  transition-duration: 0.8;
+  opacity: 1;
+  cursor: pointer;
+}
